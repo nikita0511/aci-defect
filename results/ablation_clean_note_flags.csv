@@ -1,0 +1,7 @@
+bucket,flagged_sentences,share_of_flags,notes,rubric_rules_acceptable_in_history
+Assessment/plan placement (in objectified scope),21,0.328,10,False
+Past/family/social history out of History,11,0.172,9,True
+ROS / pertinent negatives out of History,11,0.172,8,True
+Chronic-condition narrative out of History,10,0.156,4,True
+Exam content placement,8,0.125,6,False
+other,3,0.047,3,False

@@ -1,0 +1,15 @@
+plant_id,plant,arm,n,planted_span_hits,planted_span_recall,notes_flagged,note_flag_rate,mean_flagged_sentences
+P1,A&P sentence into History,objectified,28,27,0.9643,28,1.0,1.143
+P1,A&P sentence into History,complaint,28,28,1.0,28,1.0,2.107
+P1,A&P sentence into History,zhou,28,26,0.9286,27,0.9643,1.179
+P2,HPI narrative into A&P,objectified,28,15,0.5357,16,0.5714,0.714
+P2,HPI narrative into A&P,complaint,28,28,1.0,28,1.0,1.357
+P2,HPI narrative into A&P,zhou,28,27,0.9643,27,0.9643,1.357
+P3,Symptom sentence into PE,objectified,40,40,1.0,40,1.0,1.1
+P3,Symptom sentence into PE,complaint,40,40,1.0,40,1.0,1.425
+P4,RESULTS sentence into PE,objectified,30,27,0.9,27,0.9,1.067
+P4,RESULTS sentence into PE,complaint,30,30,1.0,30,1.0,1.9
+GOLD,unperturbed test1 notes (HPI->A&P leakage),objectified,39,,,10,0.2564,0.41
+GOLD,unperturbed test1 notes (subjective->PE leakage),objectified,40,,,3,0.075,0.1
+GOLD,unperturbed test1 notes (results->PE leakage),objectified,40,,,1,0.025,0.025
+GOLD,unperturbed test1 notes,complaint,40,,,28,0.7,1.6

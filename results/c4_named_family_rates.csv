@@ -1,0 +1,6 @@
+named_family,n_notes,named_mean_rate,other_mean_rate,spearman_rho
+omission,62,0.27,0.25,0.02
+history_of,18,0.63,0.78,-0.08
+hallucination,23,0.045,0.085,-0.06
+misplacement_ap_into_hpi,105,0.109,0.102,0.03
+disorganization_bundled_heading,41,0.024,0.015,0.12

@@ -1,0 +1,6 @@
+# BERTScore output moves with the bert-score release and the
+# roberta-large revision, so both are pinned here. Settings used for
+# the reported drops: model_type=roberta-large, lang=en, library
+# default layer and 512-token handling, no baseline rescaling.
+bert-score==0.3.13
+torch==2.2.2

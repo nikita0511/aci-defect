@@ -1,0 +1,12 @@
+plant_id,plant,n_planted,localized_hits,localized_recall,rouge1_drop,bertscore_f1_drop,medcon_proxy_drop,coverage_note
+P1,A/P sentence into History,28,27,0.964286,0.0,0.017,0.006,
+P2,HPI narrative into A/P,28,15,0.535714,0.0,0.017,0.0,misses spans outside the evaluator extraction window
+P3,Symptom sentence into PE,40,40,1.0,0.023,0.01,0.0,
+P4,RESULTS sentence into PE,30,27,0.9,0.018,0.009,0.0,
+P5,Fabricated normal PE finding,40,40,1.0,0.016,0.011,0.0,
+P6,Delete modifier span,36,30,0.833333,0.007,0.005,0.037,
+P7,History of on active problem,33,31,0.939394,0.003,0.002,0.0,
+P8,Lowercase brand names,19,13,0.684211,0.0,0.001,0.0,misses brands absent from the capitalization gazetteer
+P9,Bundle two A/P headings,19,18,0.947368,0.002,0.004,0.0,
+P10,CC as narrative,26,26,1.0,0.03,0.023,0.0,
+P11,Swap documented sex vs chart,30,30,1.0,0.004,0.001,0.0,

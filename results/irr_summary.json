@@ -1,0 +1,230 @@
+{
+  "key_rows": 915,
+  "irr_items_parsed": 915,
+  "matched": 915,
+  "unmatched_key_rows": 0,
+  "unmapped_irr_labels": [],
+  "notes": [
+    "aci-D2N088",
+    "aci-D2N090",
+    "aci-D2N092",
+    "aci-D2N093",
+    "aci-D2N097",
+    "aci-D2N104",
+    "aci-D2N106",
+    "aci-D2N110",
+    "aci-D2N115",
+    "aci-D2N120"
+  ],
+  "raters": [
+    "rater_A",
+    "rater_B",
+    "rater_C"
+  ],
+  "results": {
+    "hallucination": {
+      "included_only": {
+        "items": 450,
+        "notes": 10,
+        "binary": {
+          "n": 450,
+          "observed_agreement": 0.9377777777777778,
+          "expected_agreement": 0.8949037037037039,
+          "kappa": 0.4079503806033262,
+          "categories": [
+            "negative",
+            "positive"
+          ],
+          "both_positive": 11,
+          "both_negative": 411,
+          "original_only_positive": 10,
+          "irr_only_positive": 18,
+          "positive_prevalence_original": 0.04666666666666667,
+          "positive_prevalence_irr": 0.06444444444444444,
+          "positive_specific_agreement": 0.44,
+          "negative_specific_agreement": 0.9670588235294117,
+          "pabak": 0.8755555555555556,
+          "kappa_ci95": [
+            0.21739130434782586,
+            0.5792145337964204
+          ]
+        },
+        "multiclass": {
+          "n": 450,
+          "observed_agreement": 0.9266666666666666,
+          "expected_agreement": 0.893293827160494,
+          "kappa": 0.31275453535727377,
+          "categories": [
+            "fabrication",
+            "inference",
+            "no hallucination",
+            "transformation"
+          ]
+        },
+        "note_level": {
+          "notes": 10,
+          "agree": 10
+        },
+        "triangulation": {
+          "adjudication_changed_original": 19,
+          "of_those_second_rater_agrees": 9,
+          "rater1_negative_rater2_positive": 18,
+          "of_those_adjudication_also_positive": 9,
+          "rater1_positive_rater2_negative": 10
+        }
+      },
+      "all_items": {
+        "items": 454,
+        "notes": 10,
+        "binary": {
+          "n": 454,
+          "observed_agreement": 0.933920704845815,
+          "expected_agreement": 0.8917793863649595,
+          "kappa": 0.3894019546310418,
+          "categories": [
+            "negative",
+            "positive"
+          ],
+          "both_positive": 11,
+          "both_negative": 413,
+          "original_only_positive": 10,
+          "irr_only_positive": 20,
+          "positive_prevalence_original": 0.046255506607929514,
+          "positive_prevalence_irr": 0.06828193832599119,
+          "positive_specific_agreement": 0.4230769230769231,
+          "negative_specific_agreement": 0.9649532710280374,
+          "pabak": 0.86784140969163,
+          "kappa_ci95": [
+            0.20199524940617655,
+            0.5585446884369177
+          ]
+        },
+        "multiclass": {
+          "n": 454,
+          "observed_agreement": 0.9229074889867841,
+          "expected_agreement": 0.8900279454287876,
+          "kappa": 0.29898089733974503,
+          "categories": [
+            "fabrication",
+            "inference",
+            "no hallucination",
+            "transformation"
+          ]
+        },
+        "note_level": {
+          "notes": 10,
+          "agree": 10
+        },
+        "triangulation": {
+          "adjudication_changed_original": 23,
+          "of_those_second_rater_agrees": 9,
+          "rater1_negative_rater2_positive": 20,
+          "of_those_adjudication_also_positive": 9,
+          "rater1_positive_rater2_negative": 10
+        }
+      }
+    },
+    "omission": {
+      "included_only": {
+        "items": 454,
+        "notes": 10,
+        "binary": {
+          "n": 454,
+          "observed_agreement": 0.9118942731277533,
+          "expected_agreement": 0.7765141958896933,
+          "kappa": 0.605765890934352,
+          "categories": [
+            "negative",
+            "positive"
+          ],
+          "both_positive": 38,
+          "both_negative": 376,
+          "original_only_positive": 12,
+          "irr_only_positive": 28,
+          "positive_prevalence_original": 0.11013215859030837,
+          "positive_prevalence_irr": 0.14537444933920704,
+          "positive_specific_agreement": 0.6551724137931034,
+          "negative_specific_agreement": 0.9494949494949495,
+          "pabak": 0.8237885462555066,
+          "kappa_ci95": [
+            0.48561576354679803,
+            0.7117902018300422
+          ]
+        },
+        "multiclass": {
+          "n": 454,
+          "observed_agreement": 0.8810572687224669,
+          "expected_agreement": 0.7004114188127074,
+          "kappa": 0.6029797570850202,
+          "categories": [
+            "appropriately missing",
+            "inappropriately missing",
+            "inappropriately partially missing",
+            "not missing"
+          ]
+        },
+        "note_level": {
+          "notes": 10,
+          "agree": 10
+        },
+        "triangulation": {
+          "adjudication_changed_original": 15,
+          "of_those_second_rater_agrees": 9,
+          "rater1_negative_rater2_positive": 28,
+          "of_those_adjudication_also_positive": 9,
+          "rater1_positive_rater2_negative": 12
+        }
+      },
+      "all_items": {
+        "items": 461,
+        "notes": 10,
+        "binary": {
+          "n": 461,
+          "observed_agreement": 0.911062906724512,
+          "expected_agreement": 0.7777302007801583,
+          "kappa": 0.5998687469568346,
+          "categories": [
+            "negative",
+            "positive"
+          ],
+          "both_positive": 38,
+          "both_negative": 382,
+          "original_only_positive": 12,
+          "irr_only_positive": 29,
+          "positive_prevalence_original": 0.10845986984815618,
+          "positive_prevalence_irr": 0.14533622559652928,
+          "positive_specific_agreement": 0.6495726495726496,
+          "negative_specific_agreement": 0.9490683229813665,
+          "pabak": 0.8221258134490239,
+          "kappa_ci95": [
+            0.48350332251583994,
+            0.703991724039525
+          ]
+        },
+        "multiclass": {
+          "n": 461,
+          "observed_agreement": 0.8806941431670282,
+          "expected_agreement": 0.7024576394803336,
+          "kappa": 0.5990290033842556,
+          "categories": [
+            "appropriately missing",
+            "inappropriately missing",
+            "inappropriately partially missing",
+            "not missing"
+          ]
+        },
+        "note_level": {
+          "notes": 10,
+          "agree": 10
+        },
+        "triangulation": {
+          "adjudication_changed_original": 22,
+          "of_those_second_rater_agrees": 9,
+          "rater1_negative_rater2_positive": 29,
+          "of_those_adjudication_also_positive": 9,
+          "rater1_positive_rater2_negative": 12
+        }
+      }
+    }
+  }
+}

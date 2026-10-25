@@ -1,0 +1,4 @@
+model,plants,objectified_recall,composite_recall,objectified_mean_clean_fpr,composite_clean_fpr,objectified_union_clean_fpr,objectified_J_mean_fpr,composite_J,objectified_J_union_fpr,P2_objectified_J,P2_composite_J
+gemini-2.5-pro,"P2,P3,P4",0.9898,1.0,0.175,0.375,0.475,0.8148,0.625,0.5148,0.6,0.625
+gpt-4.1,"P2,P3,P4",0.8878,0.9286,0.225,0.525,0.55,0.6628,0.4036,0.3378,0.1929,0.225
+qwen_qwen3-next-80b-a3b-instruct-maas,"P2,P3,P4",0.9082,0.9592,0.2333,0.5128,0.625,0.6748,0.4464,0.2832,0.3321,0.4872

@@ -1,0 +1,7 @@
+model,family,objectified_recall,objectified_clean_fpr,composite_recall,composite_clean_fpr
+gemini-2.5-pro,P5,0.975,0.175,0.975,0.85
+gemini-2.5-pro,P7,0.9697,0.0,0.9697,0.75
+gpt-4.1,P5,0.0,0.025,0.15,0.35
+gpt-4.1,P7,0.9697,0.0,0.303,0.3
+qwen_qwen3-next-80b-a3b-instruct-maas,P5,0.0,0.1,0.1,0.4
+qwen_qwen3-next-80b-a3b-instruct-maas,P7,0.9697,0.575,0.8788,0.65

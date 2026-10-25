@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this data or code, cite the paper below and ACI-bench."
+title: "Objectify, Don't Delete: Complaint-Derived Evaluation of Ambient Clinical Notes: data and code"
+type: dataset
+authors:
+  - given-names: "Nikita"
+    family-names: "Gupta"
+    affiliation: "Suki AI"
+  - given-names: "Narayanan Unny"
+    family-names: "Edakunni"
+    affiliation: "Suki AI"
+  - given-names: "Vikram"
+    family-names: "Okaly"
+    affiliation: "Suki AI"
+  - given-names: "Suranjana"
+    family-names: "Datta"
+    affiliation: "Suki AI"
+  - given-names: "Navya"
+    family-names: "Penubadi"
+    affiliation: "Suki AI"
+  - given-names: "Karl Eric"
+    family-names: "Swanson"
+    affiliation: "Suki AI"
+  - given-names: "Siddharth"
+    family-names: "Sharma"
+    affiliation: "Suki AI"
+license: CC-BY-4.0
+repository-code: "https://github.com/nikita0511/aci-defect"
+preferred-citation:
+  type: conference-paper
+  title: "Objectify, Don't Delete: Complaint-Derived Evaluation of Ambient Clinical Notes"
+  conference:
+    name: "GenAI4Health Workshop at NeurIPS 2026"
+  year: 2026
+  authors:
+    - given-names: "Nikita"
+      family-names: "Gupta"
+    - given-names: "Narayanan Unny"
+      family-names: "Edakunni"
+    - given-names: "Vikram"
+      family-names: "Okaly"
+    - given-names: "Suranjana"
+      family-names: "Datta"
+    - given-names: "Navya"
+      family-names: "Penubadi"
+    - given-names: "Karl Eric"
+      family-names: "Swanson"
+    - given-names: "Siddharth"
+      family-names: "Sharma"

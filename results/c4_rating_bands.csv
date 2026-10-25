@@ -1,0 +1,6 @@
+rating,notes,mean_z_instance_burden,notes_no_comment,notes_comment_no_named_defect,notes_named_defect,omission_notes_scored,omission_mean_rate,history_of_notes_scored,history_of_mean_rate,ap_into_hpi_notes_scored,ap_into_hpi_mean_rate,dx_structure_notes_scored,dx_structure_mean_rate,pe_leakage_notes_scored,pe_leakage_mean_rate,hallucination_notes_scored,hallucination_mean_rate,dx_bundled_notes_scored,dx_bundled_mean_rate
+1,300,0.1534,69,159,72,298,0.2531,156,0.8081,280,0.1229,300,0.8008,240,0.0855,297,0.0929,174,0.0065
+2,143,0.0677,14,77,52,143,0.2525,85,0.7251,138,0.0841,143,0.7889,107,0.0871,142,0.0944,93,0.0054
+3,222,0.024,44,121,57,222,0.2377,115,0.7433,216,0.1068,222,0.7665,182,0.0767,222,0.0735,140,0.0229
+4,265,-0.0503,148,77,40,265,0.2267,164,0.8375,253,0.0702,265,0.7541,203,0.0675,263,0.0621,142,0.0127
+5,516,-0.0775,484,24,8,516,0.2114,289,0.8138,501,0.0951,515,0.727,421,0.0575,515,0.0605,279,0.0205

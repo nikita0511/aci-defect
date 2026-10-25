@@ -1,0 +1,1493 @@
+{
+  "arm": "complaint",
+  "criterion": "Content is in the wrong section of the note.",
+  "criterion_source": "composite complaint as clinicians write it in production feedback",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.0,
+  "backend": "vertex-sync",
+  "n": 40,
+  "results": [
+    {
+      "key": "GOLD::aci-D2N096",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N096",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Past surgical history was documented in the History of Present Illness section instead of a dedicated Past Surgical History section.",
+        "total_sentences": 16,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "She has a surgical history significant for prior left upper extremity surgery.",
+            "section": "HPI",
+            "classification": "violation",
+            "rationale": "This sentence describes past surgical history, which should be in a dedicated \"Past Surgical History\" section, not the \"History of Present Illness\".",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N095",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N095",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Content related to the chronic problem of hypertension and an unrelated Review of Systems finding were incorrectly placed in the History of Present Illness section.",
+        "total_sentences": 38,
+        "violation_count": 4,
+        "instances": [
+          {
+            "note_sentence": "While walking 6 days ago, she felt her back seize up on her.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the onset of the chief complaint and is correctly placed in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Regarding her hypertension, she states she has been doing readings at home and that has been looking great.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence is an update on a chronic condition (hypertension) and does not belong in the History of Present Illness for the chief complaint of back pain.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "She has been watching her diet which has helped.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence pertains to the management of chronic hypertension and is misplaced in the History of Present Illness for back pain.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "She is taking lisinopril.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence is an update on medication for a chronic condition and does not belong in the History of Present Illness for back pain.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient endorses nasal congestion, which she attributes to her seasonal allergies.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence is a Review of Systems finding that is unrelated to the chief complaint and should be located in the Review of Systems section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N094",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N094",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 19,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "She states she injured it while skiing.",
+            "section": "HPI",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the mechanism of injury, which is a core component of the History of Present Illness, and is correctly placed in the HPI section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Chronic constipation",
+            "section": "PAST MEDICAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence lists a chronic medical problem and is correctly placed in the PAST MEDICAL HISTORY section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Examination of the right hand reveals pain to palpation of the MCP and DIP joints.",
+            "section": "EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a finding from the physical examination and is correctly placed in the EXAM section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "X-rays of the right index finger show no obvious signs of fracture.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the findings of a diagnostic study and is correctly placed in the RESULTS section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Right index finger DIP joint sprain.",
+            "section": "IMPRESSION",
+            "classification": "acceptable",
+            "rationale": "This sentence states the final diagnosis and is correctly placed in the IMPRESSION section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "A prescription is provided for Mobic 15 mg once a day, dispense 14.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence details a medication prescription, which is part of the treatment plan, and is correctly placed in the PLAN section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N090",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N090",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 50,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "The patient denies any chest pain, shortness of breath, lightheadedness or dizziness.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence contains pertinent review of systems information directly related to the chief complaint, which is standard and acceptable to include within the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Albert Powell is a 62-year-old male with a past medical history significant for depression, type 2 diabetes, and kidney transplant.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence is a standard one-line summary of the patient, and it is common and acceptable practice to begin the Assessment and Plan section with such a statement.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N097",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N097",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence listing pertinent negative symptoms is located in the History of Present Illness section instead of the Review of Systems section.",
+        "total_sentences": 38,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "She denies any other symptoms of chest pain, shortness of breath, abdominal pain, nausea, or vomiting.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence is a list of pertinent negative symptoms, which is content that belongs in the Review of Systems section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N092",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N092",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note incorrectly includes examination and imaging results for the left wrist, while the patient's complaint and diagnosis are for the right arm.",
+        "total_sentences": 13,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "Examination of the left wrist shows tenderness over the distal radius and pain with flexion of the wrist and thumb.",
+            "section": "EXAM",
+            "classification": "violation",
+            "rationale": "This sentence describes an examination of the left wrist, but the patient's chief complaint and history are for right arm pain, making this finding misplaced within the note.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "X-rays of the left wrist show no obvious signs of acute fracture or other abnormality.",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence describes X-ray results for the left wrist, which contradicts the patient's presenting problem of right arm pain and does not belong in this note.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N089",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N089",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note contains content in the wrong section, including a Review of Systems sentence in the HPI and a clinical assessment in the Results section.",
+        "total_sentences": 49,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "She denies chest pain, shortness of breath, nausea, and vomitting.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence is a list of pertinent negatives that belongs in the Review of Systems section, not the History of Present Illness.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Well controlled rheumatoid arthritis.",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence is a clinical assessment based on the results and belongs in the Assessment and Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N091",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N091",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Multiple sentences were placed in incorrect sections, such as a review of systems item in the HPI, an imaging result in the physical exam, an HPI summary in the assessment, and past surgical history in the plan.",
+        "total_sentences": 37,
+        "violation_count": 4,
+        "instances": [
+          {
+            "note_sentence": "The patient denies any chest pain or shortness of breath.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence contains general review of systems items that should be located in the REVIEW OF SYSTEMS section, not the narrative HISTORY OF PRESENT ILLNESS.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Arthritic changes in the right knee.",
+            "section": "PHYSICAL EXAMINATION",
+            "classification": "violation",
+            "rationale": "This finding is from an X-ray and should be documented in the RESULTS section, not as a physical exam finding.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Jerry Nguyen a 54-year-old male with a past medical history significant for osteoporosis, and multiple sclerosis, who presents for an annual exam.",
+            "section": "ASSESSMENT",
+            "classification": "violation",
+            "rationale": "This sentence is a patient summary that belongs in the HISTORY OF PRESENT ILLNESS, whereas the ASSESSMENT section should list the diagnoses.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient recently underwent knee surgery.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This statement is part of the patient's past surgical history and belongs in the HISTORY OF PRESENT ILLNESS section, not as medical reasoning in the PLAN.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N098",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N098",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the patient's general exercise routine is in the History of Present Illness section but would be more appropriate in the Social History section.",
+        "total_sentences": 22,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient walks 30-minutes most days of the week.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a general exercise habit which is better suited for the Social History section rather than the History of Present Illness.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N101",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N101",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A calculated value (BSA) was incorrectly placed in the Vitals section instead of the Physical Exam or Assessment section.",
+        "total_sentences": 48,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "BSA 2.65",
+            "section": "VITALS",
+            "classification": "violation",
+            "rationale": "Body Surface Area (BSA) is a calculated value used for clinical decision-making, not a vital sign, and is more appropriately placed in the Physical Exam or Assessment section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N093",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N093",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The Plan section contains diagnoses and medical reasoning which should be located in the Assessment section.",
+        "total_sentences": 48,
+        "violation_count": 11,
+        "instances": [
+          {
+            "note_sentence": "The patient states he has had some shortness of breath and mild leg swelling which he thinks has to do with eating some salty foods at some house parties recently.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence appropriately details the patient's history of present illness in the correct section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "\u2022 Respiratory: Rales are heard bilaterally at lung bases.",
+            "section": "PHYSICAL EXAMINATION",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents a finding from the physical exam in the Physical Examination section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Acute heart failure exacerbation.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This is a diagnosis and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Reasoning: The patient is retaining fluid.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This is medical reasoning for a diagnosis and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He has noticed increased fluid retention following dietary indiscretion.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is part of the patient's history or medical reasoning and belongs in the History of Present Illness or Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He has experienced dyspnea on exertion for the past 10 days.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is part of the patient's history and belongs in the History of Present Illness section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "\u2022 Medical Treatment: Initiate Lasix 40 mg a day.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly outlines a treatment action within the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Type 1 diabetes.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This is a diagnosis and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Treatment: This is currently stable with use of an insulin pump.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is an assessment of the patient's condition and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Depression.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This is a diagnosis and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Reasoning: The patient has been doing well with outdoor stretching.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence summarizes the patient's history and belongs in the Assessment or History of Present Illness section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He continues to decline the use of medications for this issue.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence summarizes the patient's history and belongs in the Assessment or History of Present Illness section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Acid reflux.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This is a diagnosis and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Reasoning: His symptoms are stable with medication.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is an assessment of the patient's condition and belongs in the Assessment section, not the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N088",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N088",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 62,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "He has continued to utilize lisinopril 20 mg, daily.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "While current medications are often in a dedicated section, including them in the History of Present Illness as part of the narrative for a chronic condition is an acceptable documentation style.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "The patient denies nausea, vomiting, diarrhea.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "Including pertinent negative symptoms from the review of systems at the end of the History of Present Illness is a common and acceptable practice.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Andrew Campbell is a 59-year-old male with a past medical history significant for depression, type 2 diabetes, and hypertension.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This introductory sentence, though redundant with the HPI, is a standard way to begin the Assessment and Plan section and is not considered misplaced.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N100",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N100",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing a general health maintenance behavior is located in the History of Present Illness instead of the Social History.",
+        "total_sentences": 40,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "She wears sunscreen in the summer SPF 30.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a general health maintenance behavior which is more appropriate for the Social History section rather than the History of Present Illness.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N103",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N103",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A patient recommendation was incorrectly placed in the Results section instead of the Plan or Instructions section.",
+        "total_sentences": 27,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "I also recommended that the patient continues to be active within her limits.",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence is a patient recommendation and belongs in the Plan or Instructions section, not the Results section where test interpretations are documented.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N099",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N099",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information, such as a parent-reported temperature and symptoms, was incorrectly placed in the objective Physical Exam section.",
+        "total_sentences": 32,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "Temperature 100.3 degrees.",
+            "section": "PHYSICAL EXAM",
+            "classification": "violation",
+            "rationale": "This sentence reports a historical temperature taken by the parent at home, but it is placed in the Physical Exam section, which should contain objective findings from the current encounter.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Bilateral pulling of ears, no sore throat or hoarseness.",
+            "section": "PHYSICAL EXAM",
+            "classification": "violation",
+            "rationale": "This sentence describes patient symptoms and pertinent negatives reported by the mother, which belong in the History of Present Illness, not the objective Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Positive for cough.",
+            "section": "PHYSICAL EXAM",
+            "classification": "violation",
+            "rationale": "This sentence describes a symptom (cough) that is part of the patient's history, but it is placed in the Physical Exam section which is for objective findings.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N102",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N102",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Information from the patient's history was incorrectly placed in the Assessment section.",
+        "total_sentences": 42,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "Mrs. Wood presents today for renal ultrasound.",
+            "section": "ASSESSMENT",
+            "classification": "violation",
+            "rationale": "This sentence states the reason for the visit, which is information that belongs in the History of Present Illness section, not the Assessment.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Mrs. Wood reports passing two small stone like structures last week.",
+            "section": "ASSESSMENT",
+            "classification": "violation",
+            "rationale": "This sentence describes a specific historical event reported by the patient and belongs in the History of Present Illness section, not the Assessment.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N106",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N106",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Social history and review of systems information are incorrectly placed within the History of Present Illness section.",
+        "total_sentences": 30,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "He has had diarrhea after consuming large amounts of alcohol.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This information about a gastrointestinal symptom related to alcohol use belongs in the Review of Systems or Social History, not the History of Present Illness for shortness of breath.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He enjoys hunting.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a patient's hobby, which is content for the Social History section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N104",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N104",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence summarizing the patient's current status was placed in the Plan section instead of the Assessment section.",
+        "total_sentences": 16,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Stable on methotrexate and prednisone 1 mg daily.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is an assessment of the patient's current status, which belongs in the Assessment section, not the forward-looking Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N107",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N107",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 21,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "Approximately 2 hours after he finished raking leaves yesterday, the patient began to feel a tightening sensation in his low back and tingling in his right foot.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the onset and character of the patient's symptoms, which is appropriate content for the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Musculoskeletal: Reports low back pain.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "acceptable",
+            "rationale": "This sentence lists a pertinent positive symptom under the relevant body system, which is standard practice for the Review of Systems section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Pain with palpation around L5.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence documents an objective finding from the provider's physical examination, which is correctly placed in the Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "X-rays obtained and reviewed in office today were normal.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This sentence reports the findings of a diagnostic study, which is appropriate content for the Results section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Low back sprain.",
+            "section": "ASSESSMENT",
+            "classification": "acceptable",
+            "rationale": "This sentence provides the diagnosis, which is the correct content for the Assessment section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I recommend we treat this conservatively with rest, meloxicam, and formal physical therapy.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence outlines the treatment strategy, which is appropriate content for the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N108",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N108",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Content belonging in the Medical History section, such as the patient's diabetes diagnosis, management, and last A1C, was incorrectly placed in the History of Present Illness.",
+        "total_sentences": 27,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "The patient is a diabetic.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence states a chronic diagnosis, which belongs in the Medical History section, not the History of Present Illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He is taking medication for this, however, he does not monitor his blood sugar consistently.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes the management of a chronic condition and belongs in the Medical History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "His last A1C was around 10.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence lists a past lab result for a chronic condition, which belongs in the Medical History section, not the History of Present Illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Patient reports history of diabetes.",
+            "section": "MEDICAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly places the patient's chronic condition in the Medical History section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N109",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N109",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A historical lab value was placed in the \"RESULTS\" section, which is typically for new results from the current encounter.",
+        "total_sentences": 34,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Hemoglobin A1c: 6.8",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence reports a historical lab value, but it is placed in the \"RESULTS\" section, which is typically reserved for new results from the current encounter.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N114",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N114",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence detailing the patient's running hobby and shoe preference is incorrectly placed in the History of Present Illness instead of a Social History section.",
+        "total_sentences": 30,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient enjoys running and wears either New Balance or Asics shoes.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's hobbies and shoe preference, which is considered social history and is misplaced in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N105",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N105",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 67,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "Requires a walker to ambulate.",
+            "section": "SOCIAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the patient's functional status, which is appropriate content for the Social History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Lower extremity edema",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This is a physical exam finding and is correctly placed within the Physical Exam section of the note.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Impression: Sinus rhythm with frequent PVCs as well as anterior septal infarct pattern.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This EKG interpretation is correctly placed in the Results section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Diana has a 4/6 systolic murmur at the RUSB with mild radiation to the carotids.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "Although this is a physical exam finding, its repetition in the Plan section is standard practice to provide context for the management of the specific problem.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Her EKG today shows sinus rhythm with frequent PVCs as well as anterior septal infarct pattern.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "While this is a result, repeating it under the 'PVCs' problem in the Plan section is a common and acceptable way to justify the subsequent medical decision-making.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N113",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N113",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A subjective summary of the vitals was placed in the VITALS section, which is reserved for objective data.",
+        "total_sentences": 30,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Vitals look good today.",
+            "section": "VITALS",
+            "classification": "violation",
+            "rationale": "This subjective summary of the vitals belongs in the physical exam or assessment section, not the VITALS section which is for objective data.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N110",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N110",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note contains content in the wrong section, including a lab result in the HPI, a procedure performed in the Plan, and a skin finding in the cardiovascular exam section.",
+        "total_sentences": 46,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "Regarding his diabetes, his last hemoglobin A1C was 8.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence states a specific lab result, which belongs in a 'Results' or 'Past Medical History' section, not the narrative 'History of Present Illness'.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "No evidence of fluid collection.",
+            "section": "PHYSICAL EXAM",
+            "classification": "violation",
+            "rationale": "This physical exam finding relates to skin/soft tissue and is incorrectly placed under the Cardiovascular (CV) subsection instead of the SKIN subsection.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I have also performed a debridement in the office to remove some of the dead tissue.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes a procedure that has already been completed, which should be documented in a 'Procedures' section rather than the 'Plan' section, which is for future actions.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N112",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N112",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 35,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "He locates his pain to his lower back, which radiates into his left hip, down his left leg, on the side of his calf, and into his left big toe.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the location and radiation of the patient's pain, which is a core component of the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient has attempted NSAIDs in the past without relief.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes treatments the patient has tried, which is appropriate content for the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "4/5 strength on the left, 5/5 strength on the right.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence documents an objective finding from the physical examination, which is correctly placed in the Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The MRI of the lumbar spine was reviewed today.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the review of diagnostic imaging, which is appropriate content for the Results section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Acute disc herniation at L4-5 with nerve root impingement.",
+            "section": "ASSESSMENT",
+            "classification": "acceptable",
+            "rationale": "This sentence states the final diagnosis, which is the correct content for the Assessment section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I have recommended that we treat the patient conservatively with a epidural steroid injection and formal physical therapy.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence outlines the recommended treatment, which is the correct content for the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N115",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N115",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence containing Review of Systems information was incorrectly placed in the History of Present Illness section.",
+        "total_sentences": 32,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He denies any hearing problems or visual disturbances.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence documents the review of systems for HENT and eyes but is incorrectly placed in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N111",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N111",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Detailed interval history for chronic conditions like hypertension and diabetes was incorrectly placed in the History of Present Illness section, which should focus on the acute knee injury.",
+        "total_sentences": 38,
+        "violation_count": 5,
+        "instances": [
+          {
+            "note_sentence": "In terms of his hypertension, the patient admits that he did not purchase a blood pressure cuff as previously recommended.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence provides an update on a chronic condition (hypertension) and belongs in a section dedicated to chronic problem management, not the History of Present Illness for an acute knee injury.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "While he does not monitor his blood pressures at home, he has been compliant with lisinopril 20 mg.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence details the management of a chronic condition (hypertension) and is misplaced in the History of Present Illness for the patient's acute chief complaint.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "His diabetes appears to be stable based on home monitoring, although he is only checking his blood glucose levels 4 to 5 times per week.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence provides an update on a chronic condition (diabetes) and should be in a separate section, not the History of Present Illness for an acute knee injury.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He does not follow any specific diet plan, but he does try to make healthier choices such as limiting his carbohydrate intake.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence details the management of a chronic condition (diabetes) and is misplaced in the History of Present Illness for the patient's acute chief complaint.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He has also been taking his metformin 500 mg as prescribed.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence provides an update on a chronic condition (diabetes) and belongs in a section dedicated to chronic problem management, not the History of Present Illness for an acute knee injury.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N119",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N119",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Physical exam findings related to the vascular system were incorrectly placed in the Musculoskeletal section.",
+        "total_sentences": 33,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "Strong bilateral radial pulses.",
+            "section": "Musculoskeletal",
+            "classification": "violation",
+            "rationale": "This sentence describes a vascular finding and belongs in the Cardiovascular section of the physical exam, not the Musculoskeletal section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "No clubbing.",
+            "section": "Musculoskeletal",
+            "classification": "violation",
+            "rationale": "Clubbing is a physical sign related to chronic diseases, typically pulmonary or cardiovascular, and is usually documented under the Cardiovascular or Extremities section, not Musculoskeletal.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Brisk capillary refill.",
+            "section": "Musculoskeletal",
+            "classification": "violation",
+            "rationale": "Capillary refill is a measure of peripheral perfusion and is a component of the cardiovascular or peripheral vascular exam, not the musculoskeletal exam.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N118",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N118",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information, such as the patient's history of kidney stones and insomnia, was incorrectly placed in the 'Medical Reasoning' subsection of the Assessment and Plan.",
+        "total_sentences": 29,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "Patient recently experience an episode of kidney stones which is her 7th or 8th episode.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's history of kidney stones, which belongs in the History of Present Illness or Medical History section, not the Assessment and Plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient has a history of insomnia.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence states a past medical history item, which should be in the Medical History section, not under 'Medical Reasoning' in the Assessment and Plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Patient reports history of hypertension, diabetes, and kidney stones.",
+            "section": "MEDICAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly lists the patient's past medical history under the 'MEDICAL HISTORY' section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "A1c: 6.7",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This lab result is appropriately placed in the 'RESULTS' section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N116",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N116",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A physical exam finding related to the neurovascular exam of the arm was incorrectly placed under the Cardiovascular (CV) section.",
+        "total_sentences": 42,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient reports a history of right shoulder pain when he was younger while playing baseball.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "Although this is past medical history, it is directly relevant to the presenting complaint and is appropriately included in the History of Present Illness section to provide context.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "CV: >Capillary refill is less than 3 seconds.",
+            "section": "PHYSICAL EXAM",
+            "classification": "violation",
+            "rationale": "This finding is part of the neurovascular exam of the right arm but was incorrectly placed under the Cardiovascular (CV) section instead of with the other neurological or musculoskeletal findings for that extremity.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N117",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N117",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A follow-up plan item was incorrectly placed in a separate \"INSTRUCTIONS\" section instead of the \"ASSESSMENT AND PLAN\" section.",
+        "total_sentences": 36,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient will follow-up in 4 weeks to assess his elbow and to determine if additional imaging or physical therapy is needed.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the follow-up plan, which should be located within the \"ASSESSMENT AND PLAN\" section, not in a separate \"INSTRUCTIONS\" section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N120",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N120",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 32,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "The patient adds that he has gained weight over the past year.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "While this is a constitutional symptom also listed in the Review of Systems, its inclusion in the History of Present Illness is acceptable as it is directly related to the patient's decreased activity from back pain.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He denies any loss of sensation in his genital or rectal area, weakness, or loss of bladder or bowel control.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "These pertinent negative neurological symptoms are highly relevant to the chief complaint of back pain, making their inclusion in the History of Present Illness appropriate, even though they are also documented in the Review of Systems.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Midline tenderness at L4-5 disc space with right-sided lumbar paravertebral tenderness.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a finding from the physical examination and is correctly placed within the Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "This revealed a disc herniation with nerve impingement.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the findings of an imaging study and is correctly placed in the Results section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N123",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N123",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "An objective lab result is incorrectly placed in the subjective section of the note.",
+        "total_sentences": 65,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "His last hemoglobin A1c was 7.4.",
+            "section": "SUBJECTIVE",
+            "classification": "violation",
+            "rationale": "This sentence states an objective lab result, which does not belong in the subjective section of the note that is reserved for the patient's own reporting.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N121",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N121",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 40,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "He is frequent water skier.",
+            "section": "SOCIAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the patient's hobbies and activities, which is appropriate content for the Social History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Musculoskeletal: Reports right knee pain and swelling.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "acceptable",
+            "rationale": "This sentence documents the patient's subjective report of symptoms related to a specific body system, which is the correct placement for the Review of Systems.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Pain to palpation medially.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence documents an objective finding from the clinician's physical examination, which is appropriate for the Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Reasoning: Based on the patient's symptoms and exam, I believe he has a medial collateral ligament strain.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence provides the clinician's diagnosis, which is the core component of the Assessment section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N122",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N122",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 43,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "Patient reports he stopped smoking tobacco 7 years ago and has felt better since doing so.",
+            "section": "SOCIAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the patient's smoking history, which is a standard component of the Social History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Respiratory: Denies cough or shortness of breath.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the patient's current symptoms (or lack thereof) at the time of the visit within the Review of Systems section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "CT scan of chest, obtained at an outside facility, is reviewed today and demonstrates a solitary 2 cm nodule in the lateral aspect of the right upper lobe.",
+            "section": "RESULTS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the findings from an imaging study within the Results section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "It could be a benign nodule, but because of his smoking history, I think it is best that he has it surgically removed.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the physician's thought process and justification for the plan within the Medical Reasoning subsection of the Assessment and Plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I explained to the patient that his procedure will consist of 3 small incisions being made on the side of his right chest.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the information provided to the patient as part of the Patient Education and Counseling subsection of the Assessment and Plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Pulmonary function test ordered today to obtain patient's baseline.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents a planned order within the Medical Treatment subsection of the Assessment and Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N126",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N126",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 29,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "The patient denies any numbness or tingling in her toes.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "Including pertinent review of systems findings in the history of present illness is a common and acceptable practice to create a complete narrative.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Patient reports she is taking ibuprofen.",
+            "section": "MEDICATIONS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly lists a current medication in the dedicated medications section, which is appropriate even if also mentioned elsewhere.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "GAIT: The patient is ambulating with crutches.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence describes an objective observation of the patient's gait, which is a standard component of the physical exam.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Palpable dorsalis pedis and posterior tibial pulse.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This vascular finding is appropriately included as part of the musculoskeletal exam of the affected extremity, which is standard practice for a neurovascular check.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N125",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N125",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Details of the history of present illness were incorrectly documented in the Review of Systems section instead of a dedicated History of Present Illness section.",
+        "total_sentences": 25,
+        "violation_count": 4,
+        "instances": [
+          {
+            "note_sentence": "HENT: Reports right sided facial pain.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "violation",
+            "rationale": "This sentence repeats the chief complaint and is a core detail of the History of Present Illness, which does not belong in the Review of Systems.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Denies left sided facial pain.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "violation",
+            "rationale": "This sentence provides clarifying details about the chief complaint, which is content for the History of Present Illness, not the Review of Systems.",
+            "confidence": 0.8
+          },
+          {
+            "note_sentence": "Denies sensory loss, numbness, or tingling in the right cheek.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "violation",
+            "rationale": "This sentence describes a pertinent negative symptom directly related to the chief complaint, which is content for the History of Present Illness, not the Review of Systems.",
+            "confidence": 0.8
+          },
+          {
+            "note_sentence": "Denies right sided facial weakness.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "violation",
+            "rationale": "This sentence describes a pertinent negative symptom directly related to the chief complaint, which is content for the History of Present Illness, not the Review of Systems.",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N127",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N127",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 33,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "He states that he has been experiencing fatigue since the accident.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a symptom related to the chief complaint, which is appropriate content for the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Musculoskeletal: Reports neck and back pain, and occasional swelling and bruising of the neck.",
+            "section": "REVIEW OF SYSTEMS",
+            "classification": "acceptable",
+            "rationale": "This sentence lists subjective symptoms reported by the patient, which is the correct type of content for the Review of Systems section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "No bruising or edema noted.",
+            "section": "PHYSICAL EXAM",
+            "classification": "acceptable",
+            "rationale": "This sentence documents an objective finding from the provider's direct observation, which is correctly placed in the Physical Exam section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I recommended an MRI for further evaluation.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a future action item for the patient's care, which is appropriate content for the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "GOLD::aci-D2N124",
+      "plant_id": "GOLD",
+      "note_id": "aci-D2N124",
+      "planted_span": "",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 31,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "He notes bruising and swelling.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This patient-reported associated symptom is directly related to the chief complaint and is appropriately placed within the History of Present Illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient is able to weight-bear while standing.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This description of the patient's functional status is a standard component of the History of Present Illness, as it helps characterize the severity of the injury.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient works from home and plans to coach his son\u2019s basketball team in 04/2022.",
+            "section": "SOCIAL HISTORY",
+            "classification": "acceptable",
+            "rationale": "This information regarding the patient's occupation and social activities provides important context for the medical plan and is correctly placed in the Social History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I advised that it will be 3 months before he can resume his exercise routine.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This statement regarding the patient's recovery timeline is a key part of patient counseling and expectation management, which correctly belongs in the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    }
+  ]
+}

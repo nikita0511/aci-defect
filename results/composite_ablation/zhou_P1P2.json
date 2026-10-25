@@ -1,0 +1,1551 @@
+{
+  "arm": "zhou",
+  "criterion": "Is there a clear separation between the history of present illness (HPI) and the action plan to ensure there is no overlap?",
+  "criterion_source": "Zhou et al. appendix, quoted verbatim; discarded at their enforceability gate",
+  "model": "gemini-2.5-pro",
+  "temperature": 0.0,
+  "backend": "vertex-sync",
+  "n": 56,
+  "results": [
+    {
+      "key": "P1::aci-D2N091",
+      "plant_id": "P1",
+      "note_id": "aci-D2N091",
+      "planted_span": "\u2022 Medical Treatment: He will continue to follow up with his neurologist and comply with his medication regimen.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains a plan item regarding the patient's multiple sclerosis treatment, which should be in the Plan section.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: He will continue to follow up with his neurologist and comply with his medication regimen.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action or plan for the patient's multiple sclerosis management and belongs in the Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N088",
+      "plant_id": "P1",
+      "note_id": "aci-D2N088",
+      "planted_span": "\u2022 Medical Treatment: I recommend he use Robitussin for cough, as well as ibuprofen or Tylenol if he develops a fever.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains a sentence detailing the medical treatment plan, which should be in the Assessment and Plan section.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: I recommend he use Robitussin for cough, as well as ibuprofen or Tylenol if he develops a fever.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence outlines a medical treatment plan, which should be located in the Assessment and Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N100",
+      "plant_id": "P1",
+      "note_id": "aci-D2N100",
+      "planted_span": "Will continue to monitor for progression or changes in 6 months.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the future action plan is misplaced within the history and physical exam sections, violating the clear separation between the HPI and the plan.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Will continue to monitor for progression or changes in 6 months.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence describes a future action plan but is incorrectly placed within the history and physical exam sections of the note instead of the plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N095",
+      "plant_id": "P1",
+      "note_id": "aci-D2N095",
+      "planted_span": "\u2022 Specialist Referrals: We will refer her to physical therapy to work on strengthening exercises.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A plan item regarding a specialist referral is incorrectly placed within the History of Present Illness section, blurring the separation between history and plan.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Specialist Referrals: We will refer her to physical therapy to work on strengthening exercises.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action (a referral to physical therapy), which is part of the plan and should be in the Assessment and Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N089",
+      "plant_id": "P1",
+      "note_id": "aci-D2N089",
+      "planted_span": "\u2022 Medical Treatment: She will continue on methotrexate 2.5 mg once weekly. This was refilled today.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains sentences describing the medical treatment plan, which should be in the Assessment and Plan section.",
+        "total_sentences": 42,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: She will continue on methotrexate 2.5 mg once weekly.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence outlines a future treatment plan, which should be located in the Assessment and Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "This was refilled today.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes an action taken during the current visit, which is part of the plan and does not belong in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N098",
+      "plant_id": "P1",
+      "note_id": "aci-D2N098",
+      "planted_span": "Jose is a 64-year-old male who was seen today for impingement syndrome of his left shoulder, likely related to a fall he incurred 5 months ago.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a summary sentence containing the final diagnosis within the Social History section, which blurs the separation between the patient's history and the clinician's assessment.",
+        "total_sentences": 14,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Jose is a 64-year-old male who was seen today for impingement syndrome of his left shoulder, likely related to a fall he incurred 5 months ago.",
+            "section": "SOCIAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence summarizes the visit and includes the final diagnosis, which belongs in the Assessment section, not under Social History.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N097",
+      "plant_id": "P1",
+      "note_id": "aci-D2N097",
+      "planted_span": "\u2022 Medical Treatment: Continue with therapy and current management strategies. We will defer medication at this time.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains sentences outlining the medical treatment plan, which should be in the Assessment and Plan section.",
+        "total_sentences": 37,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: Continue with therapy and current management strategies.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a plan for future action but is incorrectly located in the History of Present Illness section instead of the Assessment and Plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "We will defer medication at this time.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence states a decision about the future treatment plan and belongs in the Assessment and Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N093",
+      "plant_id": "P1",
+      "note_id": "aci-D2N093",
+      "planted_span": "\u2022 Medical Treatment: I will refer him to psychiatry as his current management strategy is unsustainable due to the change in season.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a plan for medical treatment (a psychiatry referral) within the History of Present Illness section, which should only contain historical information.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: I will refer him to psychiatry as his current management strategy is unsustainable due to the change in season.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action, a referral to psychiatry, which is part of the medical plan and should not be located in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N090",
+      "plant_id": "P1",
+      "note_id": "aci-D2N090",
+      "planted_span": "\u2022 Medical Treatment: He should continue his current management strategies. We will hold off on medication and therapy at this time.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains sentences detailing the medical treatment plan, which should be exclusively in the Assessment and Plan section.",
+        "total_sentences": 20,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "\u2022 Medical Treatment: He should continue his current management strategies.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence outlines a medical treatment plan, which should be located in the Assessment and Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "We will hold off on medication and therapy at this time.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a planned course of action regarding medication and therapy, which belongs in the Assessment and Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N102",
+      "plant_id": "P1",
+      "note_id": "aci-D2N102",
+      "planted_span": "We will continue to monitor annually with renal ultrasound unless new symptoms develop.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains a sentence detailing the future monitoring plan, which should be in the Plan section.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "We will continue to monitor annually with renal ultrasound unless new symptoms develop.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action (annual monitoring), which belongs in the Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N107",
+      "plant_id": "P1",
+      "note_id": "aci-D2N107",
+      "planted_span": "I recommend we treat this conservatively with rest, meloxicam, and formal physical therapy.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence outlining the treatment plan is incorrectly included in the History of Present Illness section, violating the required separation between history and plan.",
+        "total_sentences": 10,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "I recommend we treat this conservatively with rest, meloxicam, and formal physical therapy.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence details the treatment plan but is incorrectly located in the History of Present Illness section instead of the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N103",
+      "plant_id": "P1",
+      "note_id": "aci-D2N103",
+      "planted_span": "Coumadin 4 mg daily, Lasix 40 mg daily, and Atenolol 50 mg daily.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A recommendation, which is part of the action plan, was included in the 'RESULTS' section instead of the 'PLAN' section, blurring the separation between findings and the plan.",
+        "total_sentences": 2,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "On 09/17/20 we saw Mrs. Sanchez in office, and she was doing well and thus we recommended maintaining her current medications, she is using a reminder app to stay compliant with medications.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a recommendation made during a past visit, which is appropriate content for an interval history of present illness.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "I also recommended that the patient continues to be active within her limits.",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence is a recommendation for the patient's future care and belongs in the 'PLAN' section, not the 'RESULTS' section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N104",
+      "plant_id": "P1",
+      "note_id": "aci-D2N104",
+      "planted_span": "Stable on methotrexate and prednisone 1 mg daily.",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 3,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "Stable on methotrexate and prednisone 1 mg daily.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence is a summary of the patient's current state based on the preceding history and is appropriately placed in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient will discontinue prednisone and continue methotrexate.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence clearly outlines the future treatment plan and is correctly located in the Plan section, separate from the patient's history.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient will follow up in 3 months.",
+            "section": "INSTRUCTIONS",
+            "classification": "acceptable",
+            "rationale": "This sentence provides a future directive for the patient and is correctly placed in the Instructions section, demonstrating a clear separation from the HPI.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N106",
+      "plant_id": "P1",
+      "note_id": "aci-D2N106",
+      "planted_span": "He will continue to use the albuterol inhaler; however, he should limit its use to when he is experiencing a severe flare-up of symptoms.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The history of present illness section contains a sentence detailing the future plan for medication use, which should be in the plan section.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He will continue to use the albuterol inhaler; however, he should limit its use to when he is experiencing a severe flare-up of symptoms.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action and instruction for the patient, which belongs in the plan section, not the history of present illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N108",
+      "plant_id": "P1",
+      "note_id": "aci-D2N108",
+      "planted_span": "He has been advised to call the office if his symptoms worsen and we will get him in sooner, however, if he starts to develop a fever or necrosis he has been instructed to go to the ER.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Patient instructions regarding follow-up and emergency care are incorrectly placed within the 'MEDICAL HISTORY' section instead of the plan or instructions.",
+        "total_sentences": 26,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He has been advised to call the office if his symptoms worsen and we will get him in sooner, however, if he starts to develop a fever or necrosis he has been instructed to go to the ER.",
+            "section": "MEDICAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes future instructions for the patient but is incorrectly placed in the 'MEDICAL HISTORY' section, mixing the action plan with the patient's history.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N101",
+      "plant_id": "P1",
+      "note_id": "aci-D2N101",
+      "planted_span": "Once we get the new insurance information from the patient, we will submit it to her insurance company.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note lacks a clear separation between history and plan, with future actions documented in the history section and outside of any section, while the plan section contains a summary of the current encounter.",
+        "total_sentences": 20,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "Currently she has Blue Cross Blue Shield insurance but will be added to her spouse\u2019s insurance plan in 07/2021.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence includes a future plan (changing insurance providers), which should be documented in the plan section, not the history of present illness.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Once we get the new insurance information from the patient, we will submit it to her insurance company.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence describes a clear future action but is misplaced between the social history and medications sections instead of being in the plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "An extensive discussion of breast reduction surgery was performed with the patient with consideration of the patient's age, co-morbidities, previous surgical history, body habitus, BMI, and smoking history.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes an action that was already performed during the visit (discussion) rather than a future action, which is the purpose of the plan section.",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N111",
+      "plant_id": "P1",
+      "note_id": "aci-D2N111",
+      "planted_span": "His hemoglobin A1c levels should provide more detail as far as his long-term progress so we will order that today.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing a planned action (ordering an A1c) is located in the History of Present Illness section instead of the Plan section.",
+        "total_sentences": 13,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "His hemoglobin A1c levels should provide more detail as far as his long-term progress so we will order that today.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action (ordering a lab test), which belongs in the plan section, not the history of present illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N112",
+      "plant_id": "P1",
+      "note_id": "aci-D2N112",
+      "planted_span": "With the patient's consent, we will proceed with a epidural steroid injection into the lumbar spine today.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The action plan, specifically the decision to proceed with an epidural steroid injection, is mentioned within the History of Present Illness section, violating the separation of HPI and Plan.",
+        "total_sentences": 32,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "With the patient's consent, we will proceed with a epidural steroid injection into the lumbar spine today.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action and part of the treatment plan, which should not be included in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N110",
+      "plant_id": "P1",
+      "note_id": "aci-D2N110",
+      "planted_span": "I have prescribed a collagenase ointment to be applied to the wound 1 time daily and instructed him to cover with a dry sterile dressing.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence detailing a prescription and instructions, which belongs in the plan, was incorrectly placed in the History of Present Illness section.",
+        "total_sentences": 27,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "I have prescribed a collagenase ointment to be applied to the wound 1 time daily and instructed him to cover with a dry sterile dressing.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a prescription and patient instructions, which are components of the action plan, but it is located in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N105",
+      "plant_id": "P1",
+      "note_id": "aci-D2N105",
+      "planted_span": "Depending on results as well as the severity of her aortic stenosis, we will need to consider an ischemic evaluation or possibly a heart monitor to assess the overall burden of PVCs.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the action plan is incorrectly placed in the Family History section, violating the separation between history and plan.",
+        "total_sentences": 68,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Depending on results as well as the severity of her aortic stenosis, we will need to consider an ischemic evaluation or possibly a heart monitor to assess the overall burden of PVCs.",
+            "section": "FAMILY HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action plan and belongs in the Plan section, not under the Family History section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N114",
+      "plant_id": "P1",
+      "note_id": "aci-D2N114",
+      "planted_span": "Once the MRI results are available for review and further discussion, I will also perform a spinal tap to evaluate the pressure in the brain.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains a sentence describing a future action (a spinal tap), which belongs in the Plan section.",
+        "total_sentences": 30,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Once the MRI results are available for review and further discussion, I will also perform a spinal tap to evaluate the pressure in the brain.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action to be taken by the provider, which should be located in the Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N120",
+      "plant_id": "P1",
+      "note_id": "aci-D2N120",
+      "planted_span": "With the patient's consent, we will proceed with a cortisone injection into the lumbar spine today.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence detailing the action plan is incorrectly placed outside of the Plan section, mixing it with the history and review sections of the note.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "With the patient's consent, we will proceed with a cortisone injection into the lumbar spine today.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence describes the action plan but is located outside of the Plan section, inappropriately mixed with the history sections.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N124",
+      "plant_id": "P1",
+      "note_id": "aci-D2N124",
+      "planted_span": "In the meantime, I will prescribe meloxicam to reduce swelling.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence detailing a medication prescription, which is part of the plan, outside of the dedicated 'PLAN' section.",
+        "total_sentences": 3,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "In the meantime, I will prescribe meloxicam to reduce swelling.",
+            "section": "SOCIAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes a planned action (prescribing medication) but is located outside of the 'PLAN' section, creating an overlap between history and plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He experiences pain and feelings of instability within the ankle while ambulating and is concerned for further injury.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence appropriately describes the patient's symptoms and functional limitations within the 'HISTORY OF PRESENT ILLNESS' section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Recommendation was made for an open reduction internal fixation of the right ankle.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly details the recommended treatment within the 'PLAN' section, maintaining a clear separation from the patient's history.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N115",
+      "plant_id": "P1",
+      "note_id": "aci-D2N115",
+      "planted_span": "He will also be referred to either physical rehab or a chiropractor pending his MRI results.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence detailing a future referral, which is part of the plan, was incorrectly placed in the Social History section, violating the separation of history and plan.",
+        "total_sentences": 3,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The onset of his pain began 1 week ago after he was involved in a motor vehicle accident.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the patient's history and is appropriately placed in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He will also be referred to either physical rehab or a chiropractor pending his MRI results.",
+            "section": "SOCIAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes a future action, which is part of the plan, but it is incorrectly located within the Social History section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He will begin taking Motrin 600 mg every 6 to 8 hours.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes a treatment action and is appropriately located in the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N126",
+      "plant_id": "P1",
+      "note_id": "aci-D2N126",
+      "planted_span": "The patient will follow up with me once the MRI results are available for review and further discussion.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence detailing the future follow-up plan within the Social History section, which violates the separation between history and plan.",
+        "total_sentences": 32,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient will follow up with me once the MRI results are available for review and further discussion.",
+            "section": "SOCIAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes the future follow-up plan, which belongs in the Plan section, but it is incorrectly placed under the Social History section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N116",
+      "plant_id": "P1",
+      "note_id": "aci-D2N116",
+      "planted_span": "If his symptoms do not improve with physical therapy, I will recommend a cortisone injection.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a future, conditional treatment plan within the History of Present Illness section, violating the separation between HPI and Plan.",
+        "total_sentences": 39,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "If his symptoms do not improve with physical therapy, I will recommend a cortisone injection.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a future, conditional treatment plan which belongs in the Plan section, not the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N123",
+      "plant_id": "P1",
+      "note_id": "aci-D2N123",
+      "planted_span": "- Patient Education and Counseling: The patient will continue with his metformin as he seems to be doing well. I advised the patient to follow up in 1 month for results and any adjustments that may be needed.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Action plan items, specifically patient education and counseling, are incorrectly placed within the 'MEDICAL HISTORY' section instead of the 'ASSESSMENT AND PLAN' section.",
+        "total_sentences": 66,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "The patient will continue with his metformin as he seems to be doing well.",
+            "section": "MEDICAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence outlines a future action, which is part of the treatment plan, but it is incorrectly located in the 'MEDICAL HISTORY' section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I advised the patient to follow up in 1 month for results and any adjustments that may be needed.",
+            "section": "MEDICAL HISTORY",
+            "classification": "violation",
+            "rationale": "This sentence describes a future follow-up plan, which belongs in the 'ASSESSMENT AND PLAN' section, not the 'MEDICAL HISTORY' section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P1::aci-D2N127",
+      "plant_id": "P1",
+      "note_id": "aci-D2N127",
+      "planted_span": "I have also prescribed the patient Robaxin 1500 mg every 6 to 8 hours to treat his pain.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The History of Present Illness section contains a sentence detailing a prescription, which is an action that belongs in the Plan section.",
+        "total_sentences": 33,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "I have also prescribed the patient Robaxin 1500 mg every 6 to 8 hours to treat his pain.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes a prescription, which is an action item that belongs in the Plan section, not the History of Present Illness.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N088",
+      "plant_id": "P2",
+      "note_id": "aci-D2N088",
+      "planted_span": "The patient reports that he has been doing a bit of work out in the yard in the last week or so.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information about the patient's recent activities is incorrectly placed at the end of the note, after the Assessment and Plan section, instead of in the History of Present Illness.",
+        "total_sentences": 3,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He started to feel really tired and short of breath.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the patient's symptoms and is appropriately located in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "We will obtain a COVID-19 test to rule this out.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes a planned action and is appropriately located in the Assessment and Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient reports that he has been doing a bit of work out in the yard in the last week or so.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence provides historical context for the patient's symptoms and belongs in the History of Present Illness, not at the end of the note after the plan has been detailed.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N089",
+      "plant_id": "P2",
+      "note_id": "aci-D2N089",
+      "planted_span": "She has been walking, exercising, and doing yoga, which has helped with her arthritis.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence containing new historical information about the patient's exercise habits at the end of the Assessment and Plan section, which belongs in the History of Present Illness.",
+        "total_sentences": 40,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "She has been walking, exercising, and doing yoga, which has helped with her arthritis.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence introduces new historical information about the patient's activities and their positive effect on her arthritis, which should be documented in the History of Present Illness, not the Assessment and Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N090",
+      "plant_id": "P2",
+      "note_id": "aci-D2N090",
+      "planted_span": "The patient states he was not staying on top of his blood sugar readings and felt \" woozy \" over the weekend.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information about the patient's symptoms is incorrectly placed at the end of the note, after the Assessment and Plan section, instead of in the History of Present Illness.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient states he was not staying on top of his blood sugar readings and felt \" woozy \" over the weekend.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence contains historical information about the patient's symptoms leading up to the visit and should be in the History of Present Illness section, not at the end of the note after the plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N097",
+      "plant_id": "P2",
+      "note_id": "aci-D2N097",
+      "planted_span": "The patient reports that she is doing well.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The Assessment and Plan section contains a subjective patient report that belongs in the History of Present Illness section.",
+        "total_sentences": 26,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient reports that she is doing well.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is a subjective report from the patient about her general state, which is information that belongs in the History of Present Illness, not at the end of the Assessment and Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N091",
+      "plant_id": "P2",
+      "note_id": "aci-D2N091",
+      "planted_span": "The patient states he has been traveling all over the country.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The plan section contains historical information, such as past medical events and patient statements, which should have been documented in the History of Present Illness.",
+        "total_sentences": 3,
+        "violation_count": 3,
+        "instances": [
+          {
+            "note_sentence": "He has been seeing his neurologist on a consistent basis and has been compliant with medication.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence contains historical information regarding past neurologist visits and medication compliance which belongs in the History of Present Illness, not the plan.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "The patient recently underwent knee surgery.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence introduces historical information about a past surgery which should be documented in the History of Present Illness, not the plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient states he has been traveling all over the country.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence is a piece of patient history that belongs in the History of Present Illness, not the plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N093",
+      "plant_id": "P2",
+      "note_id": "aci-D2N093",
+      "planted_span": "The patient states he has had some shortness of breath and mild leg swelling which he thinks has to do with eating some salty foods at some house parties recently.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes historical patient information, such as symptom details and past management strategies, within the 'PLAN' section, and a key HPI sentence is misplaced at the very end of the note.",
+        "total_sentences": 4,
+        "violation_count": 4,
+        "instances": [
+          {
+            "note_sentence": "He has noticed increased fluid retention following dietary indiscretion.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes a patient's observation about their condition, which is historical information that belongs in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He has experienced dyspnea on exertion for the past 10 days.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes the duration of a symptom, which is historical information that belongs in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient has been doing well with outdoor stretching.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes a past management strategy and its outcome, which is historical information that belongs in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient states he has had some shortness of breath and mild leg swelling which he thinks has to do with eating some salty foods at some house parties recently.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence contains key details about the patient's symptoms and their perceived cause, which is core information for the History of Present Illness and is misplaced at the end of the note.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N095",
+      "plant_id": "P2",
+      "note_id": "aci-D2N095",
+      "planted_span": "The patient reports she has been walking a lot lately, 30 minutes to an hour or so a day.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information about the patient's walking habits is incorrectly placed in the Assessment and Plan section instead of the History of Present Illness.",
+        "total_sentences": 28,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient reports she has been walking a lot lately, 30 minutes to an hour or so a day.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "violation",
+            "rationale": "This sentence contains historical information about the patient's recent activities, which belongs in the History of Present Illness section, not the Assessment and Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N098",
+      "plant_id": "P2",
+      "note_id": "aci-D2N098",
+      "planted_span": "The patient reports falling on his hand while going up stairs 5 months ago and has been experiencing constant pain since.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "History of present illness information regarding the onset of the patient's pain was incorrectly placed in the Instructions section.",
+        "total_sentences": 22,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "During the past 1-2 weeks, Mr. James has discontinued strength training activities.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes a relevant part of the patient's recent history and is appropriately placed in the HPI section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Today I discussed conservative options for left shoulder impingement with the patient, who opted to try physical therapy 2 session per week.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the action plan and is appropriately placed in the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient reports falling on his hand while going up stairs 5 months ago and has been experiencing constant pain since.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the onset and duration of the patient's symptoms, which is history of present illness information, but it is incorrectly placed in the Instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N100",
+      "plant_id": "P2",
+      "note_id": "aci-D2N100",
+      "planted_span": "Kayla states her acne started approximately 2 years ago and it is present almost every day.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence detailing the history of the patient's acne is incorrectly placed in the 'INSTRUCTIONS' section instead of the 'HISTORY OF PRESENT ILLNESS' section.",
+        "total_sentences": 42,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Kayla states her acne started approximately 2 years ago and it is present almost every day.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the onset and duration of the patient's acne, which is part of the history of present illness, but it is incorrectly placed in the 'INSTRUCTIONS' section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N102",
+      "plant_id": "P2",
+      "note_id": "aci-D2N102",
+      "planted_span": "The patient reports having intermittent episodes of gross hematuria over the past several months. she states she had multiple voids in one day where the color of her urine was like cherry Kool-Aid last week; then passed 2 small stone like structures.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical patient information regarding symptom history is incorrectly placed in the 'INSTRUCTIONS' section instead of the 'HISTORY OF PRESENT ILLNESS' section.",
+        "total_sentences": 2,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "The patient reports having intermittent episodes of gross hematuria over the past several months.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's symptom history, which is content for the History of Present Illness, not the Instructions section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "she states she had multiple voids in one day where the color of her urine was like cherry Kool-Aid last week; then passed 2 small stone like structures.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence provides specific details about the patient's recent symptoms and events, which belongs in the History of Present Illness section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N107",
+      "plant_id": "P2",
+      "note_id": "aci-D2N107",
+      "planted_span": "The patient's partner reports that his pain seems to worsen when he stands up.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information regarding an aggravating factor is incorrectly placed in the 'INSTRUCTIONS' section instead of the 'HISTORY OF PRESENT ILLNESS' section.",
+        "total_sentences": 17,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient's partner reports that his pain seems to worsen when he stands up.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes an aggravating factor of the patient's pain, which is part of the history of present illness, but it is incorrectly placed in the 'INSTRUCTIONS' section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N103",
+      "plant_id": "P2",
+      "note_id": "aci-D2N103",
+      "planted_span": "The patient reports feeling better and overall, pretty good.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a planning item in the results section and a patient's subjective report in the instructions section, failing to maintain a clear separation between history and the action plan.",
+        "total_sentences": 9,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "On 09/17/20 we saw Mrs. Sanchez in office, and she was doing well and thus we recommended maintaining her current medications, she is using a reminder app to stay compliant with medications.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence appropriately describes historical information from a previous visit within the history of present illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "She denies experiencing new symptoms.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the patient's current state as part of the history of present illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "She is still having chest pain intermittently, and her breathing \u201cgets shallow\u201d which results in her \u201cslowing down\u201d and decreasing her exertion.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly documents the patient's ongoing symptoms as part of the history of present illness.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "An episode of shortness of breath and chest pains may last a few minutes and will not recur for a few weeks.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence provides further detail on the patient's symptoms, which is appropriate for the history of present illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I also recommended that the patient continues to be active within her limits.",
+            "section": "RESULTS",
+            "classification": "violation",
+            "rationale": "This sentence is a recommendation for the patient's future actions, which belongs in the plan section, but it is incorrectly placed in the results section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Mrs. Melissa Sanchez is a 58-year-old female being seen today for a status post mitral valve repair, completed on 08/03/2020.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence is a standard opening for the history of present illness and is appropriately placed.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Continue with current medications. Coumadin 4 mg daily, Lasix 40 mg daily, and Atenolol 50 mg daily.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence clearly outlines the action plan regarding medications and is correctly placed in the plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Return to clinic in 6-9 months.",
+            "section": "INSTRUCTIONS",
+            "classification": "acceptable",
+            "rationale": "This sentence provides a future instruction for the patient, which is an appropriate part of the plan/instructions section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient reports feeling better and overall, pretty good.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's subjective feeling, which is part of the history of present illness, but it is incorrectly placed in the instructions section after the plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N108",
+      "plant_id": "P2",
+      "note_id": "aci-D2N108",
+      "planted_span": "He reports the ulcer has recently become red and is draining.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the patient's history of present illness is incorrectly placed in the Instructions section, which should be part of the action plan.",
+        "total_sentences": 27,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He reports the ulcer has recently become red and is draining.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes a key component of the history of present illness but is incorrectly placed within the Instructions section, which details the action plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N104",
+      "plant_id": "P2",
+      "note_id": "aci-D2N104",
+      "planted_span": "The patient reports she has been doing well since her last visit.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence describing the patient's history in the Instructions section, which should be part of the action plan.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient reports she has been doing well since her last visit.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's interval history and belongs in the History of Present Illness section, not the Instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N106",
+      "plant_id": "P2",
+      "note_id": "aci-D2N106",
+      "planted_span": "The patient also reports he gets \u201cmid-shortness of breath\u201d without reason.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing a patient-reported symptom is incorrectly placed in the instructions section, violating the separation between the history and the plan.",
+        "total_sentences": 29,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He has been seen at an urgent care where he received a nebulizer treatment and was prescribed an inhaler, which he uses when his symptoms are present.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a past treatment and its use, which is appropriate historical information for the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "The patient also reports he gets \u201cmid-shortness of breath\u201d without reason.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes a patient-reported symptom, which is part of the history of present illness, but it is incorrectly placed in the instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N112",
+      "plant_id": "P2",
+      "note_id": "aci-D2N112",
+      "planted_span": "He endorses that it was very bothersome and he was unable to play football.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence describing the patient's past history within the Plan section, violating the required separation between HPI and plan.",
+        "total_sentences": 32,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He endorses that it was very bothersome and he was unable to play football.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's past symptoms and functional limitations, which is information that belongs in the History of Present Illness section, not the Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N111",
+      "plant_id": "P2",
+      "note_id": "aci-D2N111",
+      "planted_span": "As far as treatment, he has been elevating his knee and taking Tylenol without significant relief of his pain.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The Plan section contains historical information about treatments the patient has already tried, which belongs in the History of Present Illness section.",
+        "total_sentences": 22,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "Approximately 1 week ago, the patient sustained an injury to his right knee while at a trampoline park.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the patient's history and is appropriately placed in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I am going to prescribe meloxicam 15 mg once daily for pain and swelling.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes a future action and is appropriately placed in the Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "As far as treatment, he has been elevating his knee and taking Tylenol without significant relief of his pain.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes past treatments attempted by the patient, which is historical information that belongs in the History of Present Illness section, not the Plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N101",
+      "plant_id": "P2",
+      "note_id": "aci-D2N101",
+      "planted_span": "Jones reports this is her first visit in regard to a breast reduction and has been interested in getting a breast reduction for approximately 7 years.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note contains historical information in the plan section and administrative planning details in the history of present illness section, violating the clear separation between these sections.",
+        "total_sentences": 36,
+        "violation_count": 2,
+        "instances": [
+          {
+            "note_sentence": "Ms.  Currently she has Blue Cross Blue Shield insurance but will be added to her spouse\u2019s insurance plan in 07/2021.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "violation",
+            "rationale": "This sentence describes future insurance changes, which is an administrative planning detail that belongs in the plan section rather than the history of present illness.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Jones reports this is her first visit in regard to a breast reduction and has been interested in getting a breast reduction for approximately 7 years.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence contains patient history regarding the duration of interest in the procedure, which belongs in the history of present illness section, not the plan.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N110",
+      "plant_id": "P2",
+      "note_id": "aci-D2N110",
+      "planted_span": "His last visit with a podiatrist was 2 years ago, however they moved, and he has been unable to get another podiatrist.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information regarding the patient's last podiatrist visit is incorrectly placed in the Instructions section instead of the HPI.",
+        "total_sentences": 47,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "His last visit with a podiatrist was 2 years ago, however they moved, and he has been unable to get another podiatrist.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence contains patient history information that belongs in the History of Present Illness section, not the Instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N105",
+      "plant_id": "P2",
+      "note_id": "aci-D2N105",
+      "planted_span": "She denies chest pain, syncope, palpitations, fevers, or chills.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note violates the criterion because the Plan and Instructions sections contain multiple sentences restating historical information from the History of Present Illness, blurring the separation between history and plan.",
+        "total_sentences": 34,
+        "violation_count": 4,
+        "instances": [
+          {
+            "note_sentence": "She is unsure if she has had an echocardiogram, although some of her outside records do note diastolic dysfunction, so it is possible that she had one as some point in the past.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence repeats historical information about the patient's uncertainty regarding past testing, which belongs in the HPI, not the action-oriented Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Her referral mentions tachycardia.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence states a historical fact from the referral documents and belongs in the HPI, not in the action plan.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "She is having bilateral leg pain over the past month.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence repeats a key symptom from the History of Present Illness and should not be restated in the plan section.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "She denies chest pain, syncope, palpitations, fevers, or chills.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence is a review of systems, which is historical information that belongs in the HPI, not in the patient instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N120",
+      "plant_id": "P2",
+      "note_id": "aci-D2N120",
+      "planted_span": "The patient also reports numbness and tingling, especially in his right leg that radiates distally to his foot.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The plan section includes a sentence describing the patient's symptoms, which belongs in the history of present illness.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient also reports numbness and tingling, especially in his right leg that radiates distally to his foot.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes a patient's symptom, which is historical information that belongs in the History of Present Illness or Review of Systems, not the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N115",
+      "plant_id": "P2",
+      "note_id": "aci-D2N115",
+      "planted_span": "He states that he was hit in the back and experienced whiplash.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence describing the mechanism of injury from the patient's perspective within the Plan section, which belongs in the History of Present Illness.",
+        "total_sentences": 31,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He states that he was hit in the back and experienced whiplash.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes the patient's account of the injury mechanism, which is historical information that belongs in the History of Present Illness section, not the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N114",
+      "plant_id": "P2",
+      "note_id": "aci-D2N114",
+      "planted_span": "The patient states that she was seen by Dr.",
+      "eval_result": {
+        "is_failure": false,
+        "failure_reason": "No violation detected",
+        "total_sentences": 21,
+        "violation_count": 0,
+        "instances": [
+          {
+            "note_sentence": "The onset of her headaches began when she was a teenager.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence appropriately describes the patient's past medical history, which belongs in the History of Present Illness section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "I have recommended that we obtain an urgent MRI of the brain to evaluate for any other condition that could be contributing to her symptoms.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence appropriately describes a future action based on the current assessment, which belongs in the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N126",
+      "plant_id": "P2",
+      "note_id": "aci-D2N126",
+      "planted_span": "She reports a pop in her knee at the time of injury and has been experiencing pain since that time.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information about the injury onset is incorrectly placed in the 'INSTRUCTIONS' section instead of the 'HISTORY OF PRESENT ILLNESS'.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "She reports a pop in her knee at the time of injury and has been experiencing pain since that time.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence describes the onset of the injury and duration of pain, which is information that belongs in the History of Present Illness section, not the Instructions section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N127",
+      "plant_id": "P2",
+      "note_id": "aci-D2N127",
+      "planted_span": "The patient notes that he has been in 4 motor vehicle accidents; however, he notes that he was fine after the first two accidents, but the third motor vehicle accident is when his neck and back pain began.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "Historical information regarding the patient's motor vehicle accidents and the onset of pain is improperly placed in the 'INSTRUCTIONS' section instead of the 'HISTORY OF PRESENT ILLNESS'.",
+        "total_sentences": 1,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient notes that he has been in 4 motor vehicle accidents; however, he notes that he was fine after the first two accidents, but the third motor vehicle accident is when his neck and back pain began.",
+            "section": "INSTRUCTIONS",
+            "classification": "violation",
+            "rationale": "This sentence contains historical information about the patient's past motor vehicle accidents and the onset of pain, which belongs in the History of Present Illness section, not the Instructions.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N116",
+      "plant_id": "P2",
+      "note_id": "aci-D2N116",
+      "planted_span": "He states that he was sore all over the next couple of days.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the patient's history is incorrectly placed in the Plan section, violating the required separation between the History of Present Illness and the Plan.",
+        "total_sentences": 42,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "He states that he was sore all over the next couple of days.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes a past symptom from the patient's history and belongs in the History of Present Illness section, not the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N123",
+      "plant_id": "P2",
+      "note_id": "aci-D2N123",
+      "planted_span": "He states that it bothers him a little bit throughout the day as sometimes it becomes painful.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "A sentence describing the patient's history of present illness is located after the Assessment and Plan section, violating the separation of HPI and plan.",
+        "total_sentences": 42,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient noticed the difficulty swallowing approximately 4 to 5 weeks ago.",
+            "section": "SUBJECTIVE",
+            "classification": "acceptable",
+            "rationale": "This sentence describes the history of the present illness and is correctly located in the subjective section of the note.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Medical Reasoning: The patient describes difficulty swallowing when he eats solid foods.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence summarizes the HPI within the Assessment and Plan to provide context for the medical reasoning, which is an acceptable practice.",
+            "confidence": 0.9
+          },
+          {
+            "note_sentence": "Medical Treatment: I referred the patient to gastroenterology.",
+            "section": "ASSESSMENT AND PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence describes a planned action and is correctly placed within the Assessment and Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He states that it bothers him a little bit throughout the day as sometimes it becomes painful.",
+            "section": null,
+            "classification": "violation",
+            "rationale": "This sentence is part of the history of present illness (HPI) but is incorrectly placed after the Assessment and Plan section, mixing patient history with the conclusion of the note.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    },
+    {
+      "key": "P2::aci-D2N124",
+      "plant_id": "P2",
+      "note_id": "aci-D2N124",
+      "planted_span": "He reports he landed awkwardly and twisted his right ankle after jumping to make a layup.",
+      "eval_result": {
+        "is_failure": true,
+        "failure_reason": "The note includes a sentence describing the history of the present illness within the Plan section, violating the required separation between these sections.",
+        "total_sentences": 31,
+        "violation_count": 1,
+        "instances": [
+          {
+            "note_sentence": "The patient sustained an injury to the right ankle while playing basketball with his son.",
+            "section": "HISTORY OF PRESENT ILLNESS",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the history of the present illness and is located in the appropriate HPI section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "Recommendation was made for an open reduction internal fixation of the right ankle.",
+            "section": "PLAN",
+            "classification": "acceptable",
+            "rationale": "This sentence correctly describes the action plan and is located in the appropriate Plan section.",
+            "confidence": 1.0
+          },
+          {
+            "note_sentence": "He reports he landed awkwardly and twisted his right ankle after jumping to make a layup.",
+            "section": "PLAN",
+            "classification": "violation",
+            "rationale": "This sentence describes the mechanism of injury, which is part of the history of present illness, but it is incorrectly placed at the end of the note under the Plan section.",
+            "confidence": 1.0
+          }
+        ]
+      },
+      "eval_error": null
+    }
+  ]
+}

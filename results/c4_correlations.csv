@@ -1,0 +1,4 @@
+comparison,spearman_rho,p_value,n
+rating_vs_mean_z_all_rated_notes,-0.1501,9.79e-09,1446
+rating_vs_mean_z_named_defect_notes,-0.2966,4.93e-06,229
+rating_vs_rate_of_named_judge,0.0104,0.87,249

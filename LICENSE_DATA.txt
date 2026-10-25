@@ -1,0 +1,16 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The ACI-bench-derived data, corrected-label overlay, ACI-Defect transformations,
+metadata, and documentation in this archive are licensed under the Creative
+Commons Attribution 4.0 International License.
+
+You are free to share and adapt this material for any purpose, provided that
+appropriate credit is given, a link to the license is supplied, and changes are
+indicated. Attribution must not suggest endorsement by the original ACI-bench
+authors or by the authors of the accompanying paper.
+
+License deed: https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Required source attribution and a description of modifications appear in
+NOTICE.md.

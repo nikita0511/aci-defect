@@ -1,0 +1,4 @@
+model,plants,recall,mean_clean_fpr,J
+gemini-2.5-pro,"P2,P3,P4",0.9082,0.6667,0.2415
+gpt-4.1,"P2,P3,P4",0.8673,0.5417,0.3257
+qwen_qwen3-next-80b-a3b-instruct-maas,"P2,P3,P4",0.9082,0.3912,0.5169

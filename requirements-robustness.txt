@@ -1,0 +1,5 @@
+# Only needed to rerun the judges; rescoring the shipped output is
+# standard library only.
+openai>=1.40
+google-genai>=1.0
+pydantic>=2.0
